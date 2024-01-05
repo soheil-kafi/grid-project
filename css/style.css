@@ -1,0 +1,357 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mtb-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem !important;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mr-1 {
+  margin-right: 0.5rem;
+}
+:root {
+  --light-color: #f5f5f5;
+  --primary-color: green;
+  --second-color: orangered;
+  --dark-color: #333;
+  --width: 1200px;
+  --dog-color: orangered;
+  --lion-color: purple;
+  --leopard-color: darkblue;
+  --squirrel-color: skyblue;
+  --fox-color: yellowgreen;
+}
+.green {
+  color: var(--primary-color);
+}
+img,
+.block {
+  width: 100%;
+  display: block;
+}
+.btn {
+  color: white;
+  border-radius: 15px;
+  padding: 7px 12px;
+  font-size: 14;
+  display: inline-flex;
+}
+.btn-leopard {
+  background-color: var(--leopard-color);
+}
+.btn-dog {
+  background-color: var(--dog-color);
+}
+.btn-lion {
+  background-color: var(--lion-color);
+}
+.btn-fox {
+  background-color: var(--fox-color);
+}
+.btn-squirrel {
+  background-color: var(--squirrel-color);
+}
+dog,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+.use-page {
+  background-color: var(--primary-color);
+  color: white;
+}
+body {
+  background-color: var(--light-color);
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anton", sans-serif;
+}
+
+.container {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.no-use-page:hover {
+  background-color: var(--primary-color);
+  color: white;
+  opacity: 0.7;
+}
+
+/* header */
+.nav .container {
+  display: grid;
+  grid-template-columns: 5fr 4fr 1fr;
+  padding: 10px 1rem;
+  align-items: center;
+}
+.nav {
+  background-color: white;
+}
+.menu {
+  display: flex;
+}
+.menu li a {
+  padding: 9px;
+  transition: 0.3s;
+}
+.socials i {
+  font-size: 30px;
+  margin: 0 5px;
+  transition: 0.1s;
+}
+.socials i:hover {
+  color: var(--primary-color);
+  scale: 1.1;
+}
+.socials {
+  justify-self: center;
+}
+.header-logo {
+  font-size: 30px;
+}
+/* hero page */
+.hero-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/animal4.jpg) no-repeat fixed center center / cover;
+  color: white;
+  padding: 120px 0;
+}
+.hero-img h2 {
+  font-size: 40px;
+  margin-top: 20px;
+}
+.hero-img p {
+  line-height: 35px;
+  margin-top: 20px;
+  max-width: 550px;
+}
+.hero-img a:last-child {
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-flex;
+  transition: 0.3s;
+}
+.hero-img a:last-child:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+/* main gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.card {
+  background-color: white;
+  padding: 15px;
+  position: relative;
+}
+.green-card {
+  background-color: var(--primary-color);
+  padding: 15px;
+  color: white;
+  position: relative;
+}
+.card-dark {
+  background-color: var(--dark-color);
+  padding: 15px;
+  color: white;
+  position: relative;
+}
+.dog-card {
+  grid-column-end: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.line-height {
+  line-height: 25px;
+}
+.dog-card div h3 {
+  margin: 15px 0;
+}
+.gallery a::after,
+.card div a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}
+/* footer */
+#footer {
+  color: white;
+  background-color: var(--dark-color);
+  padding: 15px;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+#footer a {
+  color: white;
+}
+#footer p {
+  line-height: 1.9rem;
+}
+.footer-inner div:last-child {
+  grid-column: 1 / -1;
+  text-align: center;
+  background-color: #444;
+  padding: 15px 0;
+}
+#footer input[type="text"] {
+  padding: 0.5rem;
+
+  outline: none;
+  width: 100%;
+  height: 40px;
+  color: var(--dark-color);
+}
+#footer input[type="text"]:focus,
+#footer input[type="submit"]:focus {
+  outline: none;
+}
+#footer input[type="submit"] {
+  color: white;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 20px;
+  border: 5px;
+  outline: none;
+  transition: 0.1s;
+  cursor: pointer;
+}
+#footer input[type="submit"]:hover {
+  opacity: 0.9;
+}
+.list li:hover,
+.list li a:hover {
+  color: var(--primary-color);
+}
+.list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #444;
+}
+.last-btn {
+  padding: 10px 25px;
+  border-radius: 3px !important;
+  margin-top: 10px;
+}
+/* About us page */
+.about-inner {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 1rem;
+  padding: 20px 0;
+  align-items: flex-start;
+}
+.join-btn {
+  border-radius: 5px;
+  padding: 10px 25px;
+  background-color: var(--dark-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.join-btn:hover {
+  transform: scale(1.01);
+}
+.about-inner p {
+  line-height: 2rem;
+}
+.writter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-color);
+  padding: 15px;
+}
+.writter .btn {
+  font-size: 15px;
+}
+/* responsive */
+/* tablet */
+@media (max-width: 800px) {
+  /* home gallery */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery :nth-child(5) {
+    order: 10;
+    grid-column-end: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  /* footer */
+  .footer-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  /* about page */
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+}
+/* small mobile */
+@media (max-width: 600px) {
+  /* header */
+  .nav .container {
+    grid-template-columns: 1fr;
+  }
+  .menu,
+  .header-logo {
+    align-self: center;
+    justify-self: center;
+  }
+  .socials {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  /* .gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery :nth-child(1),
+  .gallery :nth-child(5) {
+    grid-column: 1 / -1;
+  } */
+  /* footer */
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .menu {
+    margin-bottom: 10px;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+}
